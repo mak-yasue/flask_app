@@ -1,13 +1,8 @@
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>My First Page</title>
-    <link rel="stylesheet" href="../static/css/style.css">
-</head>
-<body>
-
-    <h1>プロフィール</h1>
+{% extends "layout.html" %}
+{% block title %}My First Page{% endblock %}
+{% block content %}
+ <h1>プロフィール</h1>
     <p>こんにちは！私はTaroです。</p>
 
     <ul>
@@ -19,7 +14,4 @@
     <br>
 
     <img src="mypage.jpg">
-
-</body>
-</html>
-
+{% endblock %}

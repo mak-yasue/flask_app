@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block title %}{{ username }}のプロフィール{% endblock %}
+{% block content %}
+    <h2>{{ username }}さんのプロフィール</h2>
+    <p>年齢: {{ age }}歳</p>
+
+    <h3>趣味</h3>
+    <ul>
+        {% for hobby in hobbies %}
+        <li>{{ hobby }}</li>
+        {% endfor %}
+    </ul>
+
+    {% if age >= 20 %}
+    <p>成人です。</p>
+    {% else %}
+    <p>未成年です。</p>
+    {% endif %}
+{% endblock %}

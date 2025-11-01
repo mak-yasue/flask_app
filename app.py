@@ -15,9 +15,16 @@ def about():
 def mypage():
     return render_template('mypage.html')
 
+@app.route("/information")
+def information():
+    return render_template('information.html')
+
 @app.route('/profile/<username>')
 def profile(username):
-    return f'{username}さんのプロフィールページ'
+    age = 19
+    hobbies = ['プログラミング', '音楽', '映画鑑賞','スポーツ','ギャンブル']
+    gender = '男'
+    return render_template('profile.html', username=username, age=age, hobbies=hobbies, gender=gender)
 
 @app.route('/post/<int:post_id>')
 def show_post(post_id):
