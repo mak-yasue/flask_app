@@ -1,16 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
+    <meta charset="UTF-8">
     <title>{% block title %}My Web App{% endblock %}</title>
+
+    <!-- 共通CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <!-- ページごとの追加CSSをここに差し込む -->
+    {% block extra_css %}{% endblock %}
 </head>
 <body>
     <header>
         <h1>共通ヘッダー</h1>
         <nav>
             <a href="/">ホーム</a> |
-            <a href="/about">About</a> |
             <a href="/mypage">マイページ</a> |
-            <a href="/profile/aaa">aaaさんのプロフィール</a>
+            <a href="/form">入力フォーム</a> |
+            <a href="/information">インフォメーション</a> |
+            <a href="/upload">アップロード</a> |
+            <a href="/gallery">ギャラリー</a>
         </nav>
     </header>
 

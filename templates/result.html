@@ -1,0 +1,10 @@
+
+{% extends "layout.html" %}
+{% block title %}My First Page{% endblock %}
+{% block content %}
+ {% if error %}
+    <p style="color:red;">{{ error }}</p>
+{% else %}
+    <p>こんにちは、{{ name }}さん！年齢は{{ age }}歳で、趣味は{{hobby}}ですね。</p>
+{% endif %} 
+{% endblock %}

@@ -1,19 +1,27 @@
 {% extends "layout.html" %}
+
 {% block title %}{{ username }}のプロフィール{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/profile.css') }}">
+{% endblock %}
+
 {% block content %}
-    <h2>{{ username }}さんのプロフィール</h2>
-    <p>年齢: {{ age }}歳</p>
+    <div class="profile-container">
+        <h2>{{ username }}さんのプロフィール</h2>
+        <p class="age">年齢: {{ age }}歳</p>
 
-    <h3>趣味</h3>
-    <ul>
-        {% for hobby in hobbies %}
-        <li>{{ hobby }}</li>
-        {% endfor %}
-    </ul>
+        <h3>趣味</h3>
+        <ul class="hobby-list">
+            {% for hobby in hobbies %}
+            <li>{{ hobby }}</li>
+            {% endfor %}
+        </ul>
 
-    {% if age >= 20 %}
-    <p>成人です。</p>
-    {% else %}
-    <p>未成年です。</p>
-    {% endif %}
+        {% if age >= 20 %}
+        <p class="status adult">成人です。</p>
+        {% else %}
+        <p class="status minor">未成年です。</p>
+        {% endif %}
+    </div>
 {% endblock %}

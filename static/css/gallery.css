@@ -1,0 +1,49 @@
+/* 🔵 Coolなブルー系ギャラリーデザイン 🔵 */
+
+body {
+    font-family: "Noto Sans JP", "Nanum Gothic", sans-serif;
+    background: linear-gradient(180deg, #e3f2ff, #f4f9ff);
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* コンテナ */
+.gallery-container {
+    max-width: 900px;
+    margin: 60px auto;
+    background: #ffffffdd;
+    border-radius: 25px;
+    padding: 30px 40px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(80, 150, 255, 0.25);
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+/* タイトル */
+.gallery-container h1 {
+    font-size: 2.2em;
+    color: #2b6cff;
+    margin-bottom: 25px;
+    text-shadow: 1px 1px 2px rgba(80, 150, 255, 0.3);
+}
+
+/* 画像グリッド */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* 各画像 */
+.gallery-grid img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 6px 15px rgba(60, 120, 230, 0.25);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.07);
+}

@@ -1,0 +1,71 @@
+/* 🔵 Coolなブルー系アップロードデザイン 🔵 */
+
+body {
+    font-family: "Noto Sans JP", "Nanum Gothic", sans-serif;
+    background: linear-gradient(180deg, #e3f2ff, #f4f9ff);
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* コンテナ */
+.upload-container {
+    max-width: 600px;
+    margin: 70px auto;
+    background-color: #ffffffdd;
+    border-radius: 25px;
+    box-shadow: 0 10px 25px rgba(80, 150, 255, 0.25);
+    padding: 40px 50px;
+    text-align: center;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+/* タイトル */
+.upload-container h1 {
+    font-size: 2.2em;
+    color: #2b6cff;
+    margin-bottom: 25px;
+    text-shadow: 1px 1px 2px rgba(80, 150, 255, 0.3);
+}
+
+/* ファイル入力 */
+.upload-container input[type="file"] {
+    margin: 15px 0;
+    padding: 10px;
+    border: 2px dashed #7bb2ff;
+    border-radius: 15px;
+    background-color: #e8f1ff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.upload-container input[type="file"]:hover {
+    background-color: #d8e8ff;
+    border-color: #4a90ff;
+}
+
+/* アップロードボタン */
+.upload-container input[type="submit"] {
+    background: linear-gradient(90deg, #5ba4ff, #2b6cff);
+    border: none;
+    padding: 12px 25px;
+    border-radius: 20px;
+    color: white;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 25px;
+    box-shadow: 0 5px 12px rgba(80, 150, 255, 0.3);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.upload-container input[type="submit"]:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(80, 150, 255, 0.4);
+}
+
+/* アニメーション */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

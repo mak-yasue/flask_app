@@ -1,13 +1,8 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <title>求人情報 | 株式会社サンプル</title>
-    <link rel="stylesheet" href="../static/css/style.css">
-</head>
-<body>
 
-    <h1>求人情報</h1>
+{% extends "layout.html" %}
+{% block title %}My First Page{% endblock %}
+{% block content %}
+ <h1>求人情報</h1>
     <p>こんにちは！株式会社サンプルでは新しい仲間を募集しています。</p>
 
     <h2>募集職種</h2>
@@ -42,6 +37,4 @@
 
     <br><br>
     <a href="https://example.com">会社のホームページへ</a>
-
-</body>
-</html>
+{% endblock %}

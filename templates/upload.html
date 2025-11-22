@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block title %}画像アップロード{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/upload.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="upload-container">
+    <h1>画像をアップロード</h1>
+    <form method="POST" enctype="multipart/form-data" action="/upload">
+        画像を選択:<br>
+        <input type="file" name="file"><br>
+        <input type="submit" value="アップロード">
+    </form>
+</div>
+{% endblock %}
+

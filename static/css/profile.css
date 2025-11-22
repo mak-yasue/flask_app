@@ -1,0 +1,86 @@
+/* 🌸 Popで韓国風のプロフィールデザイン 🌸 */
+
+body {
+    font-family: "Noto Sans JP", "Nanum Gothic", sans-serif;
+    background: linear-gradient(180deg, #ffeafc, #fff9f4);
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.profile-container {
+    max-width: 600px;
+    margin: 60px auto;
+    background-color: #ffffffcc;
+    border-radius: 25px;
+    box-shadow: 0 10px 25px rgba(255, 160, 190, 0.3);
+    padding: 30px 40px;
+    text-align: center;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+/* タイトル */
+.profile-container h2 {
+    font-size: 2em;
+    color: #ff6ea1;
+    text-shadow: 1px 1px 2px rgba(255, 150, 180, 0.4);
+    margin-bottom: 20px;
+}
+
+/* 年齢テキスト */
+.age {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+/* 趣味リスト */
+.hobby-list {
+    list-style: none;
+    padding: 0;
+}
+
+.hobby-list li {
+    background: linear-gradient(90deg, #ffd1f0, #ffe5f9);
+    margin: 8px auto;
+    padding: 10px 20px;
+    border-radius: 15px;
+    width: 70%;
+    font-weight: 600;
+    color: #ff4f8b;
+    box-shadow: 0 3px 6px rgba(255, 130, 170, 0.2);
+    transition: transform 0.2s;
+}
+
+.hobby-list li:hover {
+    transform: scale(1.05);
+}
+
+/* 成人・未成年ラベル */
+.status {
+    font-size: 1.2em;
+    margin-top: 25px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.status.adult {
+    background-color: #ffe6f0;
+    color: #ff2b7a;
+    border: 2px solid #ff94b6;
+}
+
+.status.minor {
+    background-color: #e6f3ff;
+    color: #0076ff;
+    border: 2px solid #94bfff;
+}
+
+/* アニメーション */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+body { background-color: pink !important; }
